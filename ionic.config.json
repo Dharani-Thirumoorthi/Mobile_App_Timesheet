@@ -1,0 +1,7 @@
+{
+  "name": "Timesheet_FrontEnd",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

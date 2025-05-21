@@ -1,0 +1,101 @@
+<ion-app>
+  <!-- Sidebar -->
+  <app-sidebar></app-sidebar> 
+  <!-- Main Content -->
+  <ion-content class="white-bg">
+    <div class="status-container">
+      <button [ngClass]="{'default': selectedStatus === 'all'}" (click)="changeStatus('all')" >All</button>
+      <button [ngClass]="{'approval': selectedStatus === 'approval'}" (click)="changeStatus('approval')">Approval</button>
+      <button [ngClass]="{'reject': selectedStatus === 'reject'}" (click)="changeStatus('reject')">Reject</button>
+      <button [ngClass]="{'pending': selectedStatus === 'pending'}" (click)="changeStatus('pending')">Pending</button>
+    </div>
+
+    <!-- Start Date and End Date Selection -->
+    <div class="filter-container">
+      <div class="row">
+        <div class="start-end-dates">
+          <ion-item class="start-date">
+            <ion-label position="floating">Start Date</ion-label><br>
+            <ion-input [(ngModel)]="startDate" type="date"></ion-input>
+          </ion-item>
+
+          <ion-item class="end-date">
+            <ion-label position="floating">End Date</ion-label><br>
+            <ion-input [(ngModel)]="endDate" type="date"></ion-input>
+          </ion-item>
+        </div>
+      </div>
+    </div>
+
+    <!-- Employee ID, Filter, and Clear Buttons -->
+    <!-- <div class="employee-id-container">
+      <ion-item >
+        <ion-label position="floating">Employee ID</ion-label><br>
+        <ion-input [(ngModel)]="employeeId" placeholder="Enter Employee ID"></ion-input>
+      </ion-item> -->
+      <div class="employee-id-container" >
+        <ion-item *ngIf="employeeRole === 'admin'">
+          <ion-label position="floating">Employee ID</ion-label><br>
+          <ion-input [(ngModel)]="employeeId" placeholder="Enter Employee ID"></ion-input>
+        </ion-item>
+      <div class="buttons-container" >
+        <button class="filter-btn" (click)="fetchFilteredEmployeeDetails()">Filter</button>
+        <!-- <button class="clear-btn" (click)="fetchEmployeeDetails()">Clear</button> -->
+      </div>
+    </div>
+
+  
+    <!-- <ion-content class="ion-padding custom-content"> -->
+    <div class="ion-padding custom-content">
+
+      <h3 class="title">Status</h3>
+      <div *ngFor="let employee of employeeDetails"
+     class="request-card"
+     [ngClass]="{
+       'approved': employee.Timesheet_Status === 'Approved',
+       'rejected': employee.Timesheet_Status === 'Rejected',
+       'pending': employee.Timesheet_Status === 'Pending'
+     }">
+
+   
+        <div class="request-content">
+          <p><ion-icon name="person-circle-outline"></ion-icon><strong>{{ employee.Employee_Name }}</strong> ({{ employee.Employee_Id }})</p>
+          <p><ion-icon name="briefcase-outline"></ion-icon>{{ employee.Project_Name }} ({{ employee.Project_ID }})</p>
+          <p><ion-icon name="calendar-outline"></ion-icon> Start_Date: {{ employee.Start_Date }}</p>
+          <p><ion-icon name="calendar-outline"></ion-icon> End_Date: {{ employee.End_Date }}</p>
+          <p><ion-icon name="analytics-outline"></ion-icon> Worked Hours: {{ employee.Total_Worked_Hours }}</p>
+          <p><ion-icon name="airplane-outline"></ion-icon> Leave Hours: {{ employee.Total_Leave_Hours }}</p>
+        </div>
+        <div class="status">
+          <span [ngClass]="{
+  'approved': employee.Timesheet_Status === 'Approved',
+  'rejected': employee.Timesheet_Status === 'Rejected',
+  'pending': employee.Timesheet_Status === 'Pending'
+}">
+  {{ employee.Timesheet_Status }} 
+</span>
+
+          <div class="action-buttons"*ngIf="employeeRole === 'admin'">
+            <div class="button-group" *ngIf="employee.Timesheet_Status !== 'Approved'">
+              <ion-button fill="clear" (click)="approveRequest(employee)">
+                <ion-icon name="checkmark-circle-outline"></ion-icon>
+              </ion-button>
+              <div class="label">Approve</div>
+            </div>
+          
+            <div class="button-group" *ngIf="employee.Timesheet_Status !== 'Rejected'">
+              <ion-button fill="clear" (click)="rejectRequest(employee)">
+                <ion-icon name="close-circle-outline"></ion-icon>
+              </ion-button>
+              <div class="label">Reject</div>
+            </div>
+          </div>
+          
+          
+        </div>
+      </div>
+   
+    </div>
+    
+  </ion-content>
+</ion-app>

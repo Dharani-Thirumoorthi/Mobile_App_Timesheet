@@ -1,0 +1,164 @@
+h3 {
+    margin-bottom: 12px;
+    color: #333;
+  }
+  
+  .request-card {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background: white;
+    margin-bottom: 12px;
+    position: relative;
+  
+    .left-indicator {
+      width: 6px;
+      height: 100%;
+      border-radius: 4px;
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+    }
+  
+    .Annual {
+      background-color: yellow;
+    }
+  
+    .Sick {
+      background-color: yellow;
+    }
+  
+    .request-content {
+      flex: 1;
+      padding-left: 16px;
+      font-family: Arial, Helvetica, sans-serif;
+  
+      h4 {
+        margin: 0 0 6px;
+        font-size: 16px;
+        font-weight: bold;
+      }
+  
+      p {
+        display: flex;
+        align-items: center;
+        font-size: 14px;
+        color: #555;
+        margin: 2px 0;
+  
+        ion-icon {
+          margin-right: 6px;
+          color: #666;
+        }
+      }
+    }
+  
+    .status {
+      text-align: right;
+  
+      span {
+        font-size: 14px;
+        font-weight: bold;
+      }
+  
+      .pending {
+        color: yellow;
+      }
+  
+      .accepted {
+        color: #28a745;
+      }
+  
+      .rejected {
+        color: #dc3545;
+      }
+  
+      .action-buttons {
+        margin-top: 8px;
+        display: flex;
+        gap: 6px;
+  
+        ion-button {
+          --padding-start: 0;
+          --padding-end: 0;
+          font-size: 22px;
+        }
+      }
+    }
+  }
+
+  .header-gradient {
+    background: linear-gradient(to right, #A3C848, #3AB0E5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensure logo and contact are spaced out */
+    padding: 10px;
+  }
+  
+  .logo {
+    width: 120px; /* Adjust size as needed */
+    height: auto;
+  }
+  
+  .contact-us {
+    font-size: 16px;
+    font-weight: lighter;
+    color: #ffffff; /* Adjust text color as needed */
+    cursor: pointer;
+  }
+  
+  ion-menu {
+    --background: linear-gradient(to right, #A3C848, #3AB0E5); /* Gradient background for the sidebar */
+    --width: 250px; /* Adjust width of the sidebar */
+    --box-shadow: none; /* Optional: remove shadow for a cleaner look */
+  }
+  
+  ion-menu ion-content {
+    --background: linear-gradient(to right, #A3C848, #3AB0E5); /* Ensure gradient continues in the sidebar */
+  }
+  
+  ion-header {
+    --background: transparent; /* Keep header transparent so gradient is visible */
+  }
+  
+  ion-toolbar {
+    --background: transparent; /* Keep toolbar transparent to let gradient show */
+  }
+
+  .dashboard{
+    --background: linear-gradient(to right, #A3C848, #3AB0E5); /* Ensure items don’t have their own background */
+    --color: #ffffff; /* White text color */
+  }
+  .timesheetentry{
+    --background: linear-gradient(to right, #A3C848, #3AB0E5); /* Ensure items don’t have their own background */
+    --color: #ffffff; /* White text color */
+  }
+  .calendar{
+    --background: linear-gradient(to right, #A3C848, #3AB0E5); /* Ensure items don’t have their own background */
+    --color: #ffffff; /* White text color */
+  }
+.timesheetreport{
+  --background: linear-gradient(to right, #A3C848, #3AB0E5); /* Ensure items don’t have their own background */
+    --color: #ffffff; /* White text color */
+}
+.expensesheet{
+  --background: linear-gradient(to right, #A3C848, #3AB0E5); /* Ensure items don’t have their own background */
+    --color: #ffffff; /* White text color */
+}
+
+  ion-list {
+    padding: 0; /* Ensure no extra padding or margins are added */
+  }
+  ion-toolbar {
+    --background: linear-gradient(to right, #A3C848, #3AB0E5); /* Change to your desired toolbar color (e.g., green) */
+    color: white; /* Ensure the text color is white for contrast */
+    
+  }
+  // ion-icon {
+  //   font-size: 2rem;
+  //   color: #ffffff;
+  // }

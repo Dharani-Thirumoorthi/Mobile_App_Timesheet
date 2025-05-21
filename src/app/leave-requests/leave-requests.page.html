@@ -1,0 +1,88 @@
+<ion-app>
+  <!-- Sidebar Menu -->
+  <ion-menu side="start" menu-id="first" content-id="main-content">
+    <ion-header class="header">
+      <ion-toolbar>
+        <ion-title >Timesheet</ion-title>
+      </ion-toolbar>
+    </ion-header>
+
+    <ion-content >
+      <ion-list>
+        <!-- <ion-item button routerLink="/dashboard">
+          <ion-icon slot="start" name="speedometer-outline"></ion-icon>
+          <ion-label >Dashboard</ion-label>
+        </ion-item> -->
+        <ion-item class="dashboard" (click)="navigateToDashboard()">
+          <ion-icon slot="start" name="speedometer-outline"></ion-icon>
+          <ion-label>Dashboard</ion-label>
+        </ion-item>
+        
+       
+        <ion-item class="timesheetentry" (click)="navigateToTimesheetEntry()">
+          <ion-icon slot="start" name="create-outline"></ion-icon>
+          <ion-label>Timesheet Entry</ion-label>
+        </ion-item>
+        
+        <ion-item class="calendar" button (click)="navigateToCalendar()">
+          <ion-icon slot="start" name="calendar-outline"></ion-icon>
+          <ion-label>Calendar</ion-label>
+        </ion-item>
+        <ion-item class="timesheetreport" (click)="navigateToTimesheetReport()">
+          <ion-icon slot="start" name="document-text-outline"></ion-icon>
+          <ion-label>Timesheet Report</ion-label>
+        </ion-item>
+        <ion-item class="expensesheet" (click)="navigateToExpenseSheet()">
+          <ion-icon slot="start" name="wallet-outline"></ion-icon>
+          <ion-label>Expense Sheet</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
+
+  <!-- Main Content -->
+  <ion-router-outlet id="main-content"></ion-router-outlet>
+  
+  <!-- Header -->
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button> <!-- Menu toggle button -->
+      </ion-buttons>
+      <div class="header-gradient">
+        <img src="assets/Logo.png" alt="Logo" class="logo">
+        <!-- <div class="contact-us">
+          Contact Us
+        </div> -->
+        <div class="contact-us" (click)="showContactUsAlert()">Contact Us</div>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+
+
+<ion-content class="ion-padding">
+  <h3>Pending requests</h3>
+  <div *ngFor="let request of pendingRequests" class="request-card">
+    <div class="left-indicator" [ngClass]="request.type"></div>
+    <div class="request-content">
+      <h4><ion-icon name="person-circle-outline"></ion-icon> {{ request.employeeName }}</h4>
+      <p><ion-icon name="business-outline"></ion-icon> Project ID: {{ request.projectId }}</p>
+      <p><ion-icon name="briefcase-outline"></ion-icon> Project Name: {{ request.projectName }}</p>
+      <p><ion-icon name="calendar-outline"></ion-icon>  {{ request.timesheetPeriod }}</p>
+      <p><ion-icon name="time-outline"></ion-icon> Worked Hours: {{ request.workedHours }}</p>
+      <p><ion-icon name="bed-outline"></ion-icon> Leave Hours: {{ request.leaveHours }}</p>
+    </div>
+    <div class="status">
+      <span class="pending">Pending</span>
+      
+      <div class="action-buttons">
+        <ion-button color="primary" fill="clear"><ion-icon name="download-outline"></ion-icon></ion-button>
+        <ion-button color="secondary" fill="clear"><ion-icon name="create-outline"></ion-icon></ion-button>
+      </div>
+    </div>
+  </div>
+
+
+  
+</ion-content>
+</ion-app>

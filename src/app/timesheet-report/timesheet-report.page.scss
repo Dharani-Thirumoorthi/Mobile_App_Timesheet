@@ -1,0 +1,756 @@
+.white-bg {
+  --background: #fdebf8;
+  // --background:#fdebf8;
+}
+
+.status-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 20px 0;
+
+  button {
+    padding: 10px 20px;
+    border: none;
+    background: #e0e0e0;
+    color: black;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin-top: 20px;
+
+    &.default {
+      background-color: #3AB0E5;
+      color: black;
+    }
+
+    &.approval {
+      background-color: green;
+      color: white;
+    }
+
+    &.reject {
+      background-color: red;
+      color: white;
+    }
+
+    &.pending {
+      background-color: #FFA500;
+      color: black;
+    }
+  }
+}
+
+.filter-container {
+  margin: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 25px;
+  
+}
+
+ion-item {
+  flex: 1;
+}
+
+.filter-btn {
+  padding: 10px 18px;
+  background-color: #f48fc3;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: darkslateblue;
+  }
+}
+
+.clear-btn {
+  padding: 10px 18px;
+  background-color: rgb(213, 171, 171);
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: gray;
+  }
+}
+
+.user-icon {
+font-size: 22px;
+color: white;
+}
+/* Styling for the table */
+/* Styling for the table */
+table {
+width: 90%;
+border-collapse: collapse;
+margin-top: 20px;
+margin-left: 20px;
+
+
+}
+
+table, th, td {
+border: 1px solid black;
+
+}
+
+th, td {
+padding: 10px;
+text-align: left;
+color: black; /* Make text inside the table black */
+}
+
+th {
+background-color: #f4f4f4;
+font-weight: bold;
+}
+
+td {
+background-color: #f9f9f9;
+}
+
+
+
+ion-item {
+  flex: 1;
+  min-width: 140px; /* Ensure enough space */
+  --background: #fdebf8;
+  color: white !important;
+}
+
+ion-input {
+  color: black !important;
+  background-color: #fdebf8 !important;
+  border-radius: 5px;
+  padding: 10px;  /* Increase padding for better visibility */
+  font-size: 16px;
+  min-width: 100px;  /* Ensure enough space */
+  overflow: hidden;
+  text-overflow: ellipsis;  /* Prevents text cutoff */
+  white-space: nowrap;
+}
+
+ion-label {
+  color: black !important;
+  font-size: 14px;
+}
+
+.start-date{
+    color: black !important;
+    font-size: 20px;
+}
+
+.end-date{
+    color: black !important;
+    font-size: 20px;
+}
+
+
+.center-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: white; /* Adds a transparent background */
+}
+
+ion-card {
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  background: white;
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.start-end-dates {
+    display: flex;
+    justify-content: space-between;  /* Place items on opposite sides */
+    align-items: center;  /* Align vertically */
+  }
+  
+  .start-date,
+  .end-date {
+    flex: 1;  /* Allow both items to take equal space */
+    margin: 10px; /* Optional: add margin to space out the items */
+  }
+  
+  .start-date ion-label,
+  .end-date ion-label {
+    text-align: center;  /* Align labels to the left */
+      
+  }
+  
+  /* Optional: Adjust input fields to look good next to each other */
+  ion-item {
+    padding: 0;
+    
+  }
+  
+  ion-input {
+    width: 100%;  /* Ensure the input takes full width */
+  }
+
+  /* Container for Employee ID */
+.employee-id-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px; /* Add some margin to the top */
+  }
+  
+  /* Centering Employee ID input */
+  .employee-id-container ion-item {
+    width: 80%; /* Adjust the width of the input */
+    margin-bottom: 10px;
+  }
+  
+  /* Center the buttons below the input */
+  .buttons-container {
+    display: flex;
+    justify-content: space-around; /* Space buttons evenly */
+    width: 80%; /* Adjust the width of the buttons container */
+    margin-top: 10px;
+  }
+  
+  .filter-btn,
+  .clear-btn {
+    width: 45%; /* Set width of the buttons to make them look balanced */
+    padding: 10px; /* Add padding to make buttons more clickable */
+  }
+  .dashboard{
+    --background: linear-gradient(to right, #A3C848, #3AB0E5); /* Ensure items don’t have their own background */
+    --color: #ffffff; /* White text color */
+  }
+  .timesheetentry{
+    --background: linear-gradient(to right, #A3C848, #3AB0E5); /* Ensure items don’t have their own background */
+    --color: #ffffff; /* White text color */
+  }
+  .calendar{
+    --background: linear-gradient(to right, #A3C848, #3AB0E5); /* Ensure items don’t have their own background */
+    --color: #ffffff; /* White text color */
+  }
+.timesheetreport{
+  --background: linear-gradient(to right, #A3C848, #3AB0E5); /* Ensure items don’t have their own background */
+    --color: #ffffff; /* White text color */
+}
+.expensesheet{
+  --background: linear-gradient(to right, #A3C848, #3AB0E5); /* Ensure items don’t have their own background */
+    --color: #ffffff; /* White text color */
+}
+
+.toolbar{
+--background: linear-gradient(to right, #A3C848, #3AB0E5); /* Change to your desired toolbar color (e.g., green) */
+color: white; /* Ensure the text color is white for contrast */
+}
+
+ion-menu {
+--background: linear-gradient(to right, #A3C848, #3AB0E5); /* Gradient background for the sidebar */
+--width: 250px; /* Adjust width of the sidebar */
+--box-shadow: none; /* Optional: remove shadow for a cleaner look */
+
+
+}
+
+ion-menu ion-content {
+--background: linear-gradient(to right, #A3C848, #3AB0E5); /* Ensure gradient continues in the sidebar */
+
+}
+
+// .header-gradient {
+//   background: linear-gradient(to right, #A3C848, #3AB0E5);
+//   color: white;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between; /* Ensure logo and contact are spaced out */
+//   padding: 10px;
+// }
+
+// .logo {
+//   width: 120px; /* Adjust size as needed */
+//   height: auto;
+// }
+
+// .contact-us {
+//   font-size: 16px;
+//   font-weight: lighter;
+//   color: #ffffff; /* Adjust text color as needed */
+//   cursor: pointer;
+// }
+
+/* Page Background */
+ion-content {
+--background: #f4f4f4;
+
+}
+
+ion-menu {
+--background: linear-gradient(to right, #A3C848, #3AB0E5); /* Gradient background for the sidebar */
+--width: 250px; /* Adjust width of the sidebar */
+--box-shadow: none; /* Optional: remove shadow for a cleaner look */
+}
+
+ion-menu ion-content {
+--background: linear-gradient(to right, #A3C848, #3AB0E5); /* Ensure gradient continues in the sidebar */
+
+}
+
+ion-header {
+--background: transparent; /* Keep header transparent so gradient is visible */
+height: 80px; /* Custom height */
+padding-top: env(safe-area-inset-top); /* Avoid overlap with status bar */
+}
+
+ion-toolbar {
+--background: transparent; /* Keep toolbar transparent to let gradient show */
+
+}
+
+.dashboard{
+--background: linear-gradient(to right, #A3C848, #3AB0E5); /* Ensure items don’t have their own background */
+--color: #ffffff; /* White text color */
+}
+.timesheetentry{
+--background: linear-gradient(to right, #A3C848, #3AB0E5); /* Ensure items don’t have their own background */
+--color: #ffffff; /* White text color */
+}
+.calendar{
+--background: linear-gradient(to right, #A3C848, #3AB0E5); /* Ensure items don’t have their own background */
+--color: #ffffff; /* White text color */
+}
+.timesheetreport{
+--background: linear-gradient(to right, #A3C848, #3AB0E5); /* Ensure items don’t have their own background */
+--color: #ffffff; /* White text color */
+}
+.expensesheet{
+--background: linear-gradient(to right, #A3C848, #3AB0E5); /* Ensure items don’t have their own background */
+--color: #ffffff; /* White text color */
+}
+
+ion-list {
+padding: 0; /* Ensure no extra padding or margins are added */
+
+}
+
+
+/* Card Styling */
+ion-card {
+text-align: center;
+margin: 10px;
+--background: #ffffff;
+--box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+ion-card-header {
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+ion-card-subtitle {
+font-size: 0.9rem;
+color: #666;
+}
+
+ion-card-content h1 {
+font-size: 2rem;
+font-weight: bold;
+}
+
+/* Icon Styling */
+ion-icon {
+font-size: 2rem;
+color: #000000;
+}
+
+/* Center the button */
+.button-col {
+text-align: center;
+}
+
+.statistics-button {
+font-size: 1.2rem;
+padding: 10px 100px;
+border-radius: 5px;
+}
+
+/* Header Styling */
+ion-header {
+--background: #3AB0E5; /* Change to your desired color (e.g., light blue) */
+height: 80px; /* Adjust header height */
+}
+
+ion-toolbar {
+--background: linear-gradient(to right, #A3C848, #3AB0E5) !important;
+height: 80px;
+padding: 0 10px; /* Reduce padding */
+display: flex;
+align-items: end;
+justify-content: space-between;
+}
+
+/* Title Color in Header */
+ion-title {
+color: white; /* Adjust title text color */
+}
+
+/* Fix unwanted black space between sections */
+ion-content > * {
+margin: 0;
+padding: 0;
+
+}
+
+
+h3 {
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.request-card {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background: white;
+  margin-bottom: 12px;
+  position: relative;
+
+  .left-indicator {
+    width: 6px;
+    height: 100%;
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  .Annual {
+    background-color: green;
+  }
+
+  .Sick {
+    background-color: green;
+  }
+
+  .request-content {
+    flex: 1;
+    padding-left: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+
+    h4 {
+      margin: 0 0 6px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    p {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      color: #555;
+      margin: 2px 0;
+
+      ion-icon {
+        margin-right: 6px;
+        color: #666;
+      }
+    }
+  }
+
+  .status {
+    text-align: right;
+
+    span {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .pending {
+      color: green;
+    }
+
+    .accepted {
+      color: #28a745;
+    }
+
+    .rejected {
+      color: #dc3545;
+    }
+
+    .action-buttons {
+      margin-top: 8px;
+      display: flex;
+      gap: 6px;
+      color: #000;
+
+      ion-button {
+        --padding-start: 0;
+        --padding-end: 0;
+        font-size: 22px;
+      }
+    }
+  }
+  
+  .custom-content {
+      background: #f4f4f4; /* Light grey background */
+      min-height: 100vh; 
+    }
+    
+    /* Title Styling */
+    .title {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      color: #333;
+      padding: 10px;
+    }
+    
+    /* Request Card */
+    .request-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Left Indicator */
+    .left-indicator {
+      width: 6px;
+      height: 100%;
+      border-radius: 5px;
+      
+    }
+    
+    /* Request Content */
+    .request-content {
+      flex-grow: 1;
+      padding-left: 15px;
+      
+    }
+    
+    .request-content h4 {
+      font-size: 18px;
+      font-weight: 600;
+      color: black;
+      margin-bottom: 8px;
+    }
+    
+    .request-content p {
+      font-size: 14px;
+      color: black;
+      margin: 4px 0;
+      display: flex;
+      align-items: center;
+    }
+    
+    .request-content ion-icon {
+      margin-right: 5px;
+      color: #3AB0E5;
+    }
+    
+    /* Status Section */
+    .status {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      
+    }
+    
+    .status .pending {
+      font-size: 17px;
+      font-weight: bold;
+      color: #FFA500;
+      padding: 5px 10px;
+      background: #fdf3d0;
+      border-radius: 5px;
+    }
+    .status .rejected {
+      font-size: 17px;
+      font-weight: bold;
+      color: #dc3545;
+      padding: 5px 10px;
+      background: #ffe2e5;
+      border-radius: 5px;
+    }
+    .status .approved {
+      font-size: 17px;
+      font-weight: bold;
+      color: #28a745;
+      padding: 5px 10px;
+      background: #c3f7cf;
+      border-radius: 5px;
+    }
+    
+    /* Action Buttons */
+    .action-buttons {
+      display: flex;
+      margin-top: 10px;
+    }
+    
+    .action-buttons ion-button {
+      font-size: 18px;
+      color: #333;
+      transition: 0.3s ease;
+    }
+    
+    .action-buttons ion-button:hover {
+      transform: scale(1.1);
+    }
+    
+    /* Buttons */
+    ion-button {
+      border-radius: 8px;
+      padding: 8px 15px;
+    }
+    
+    /* Sidebar & Menu Styling */
+    ion-menu {
+      --background: linear-gradient(to right, #A3C848, #3AB0E5);
+      --width: 260px;
+    }
+    
+    ion-menu ion-content {
+      --background: linear-gradient(to right, #A3C848, #3AB0E5);
+    }
+    
+    /* Toolbar */
+    .toolbar {
+      --background: linear-gradient(to right, #A3C848, #3AB0E5);
+      color: white;
+    }
+ 
+    
+}
+
+.action-buttons ion-icon[name="checkmark-circle-outline"] {
+  color: green;
+}
+
+.action-buttons ion-icon[name="close-circle-outline"] {
+  color: red;
+}
+
+
+.action-buttons {
+  display: flex;
+  align-items: center; /* Aligns items vertically */
+  gap: 10px; /* Adds spacing between elements */
+}
+
+
+.action-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.label {
+  font-size: 14px;
+  color: #333;
+}
+
+
+
+.action-buttons {
+  display: flex;
+  justify-content: center; /* Centers content */
+  gap: 20px; /* Adds spacing between Approve and Reject buttons */
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers button and label */
+  text-align: center;
+}
+
+.label {
+  margin-top: 5px; /* Adds spacing between button and text */
+  font-size: 14px;
+  color: #333;
+}
+
+.approved {
+color: green;
+font-weight: bold;
+}
+
+.rejected {
+color: red;
+font-weight: bold;
+}
+
+.pending {
+color: orange;
+font-weight: bold;
+}
+.custom-content {
+overflow-y: auto; /* Allow vertical scrolling */
+max-height: 100vh; /* Set max height to ensure scrolling */
+}
+
+.title{
+margin: 20px;
+}
+
+
+.left-indicator {
+width: 8px;
+height: 100%;
+position: absolute;
+left: 0;
+top: 0;
+border-radius: 5px 0 0 5px;
+margin: 10px;
+}
+
+.approved-indicator {
+background-color: green;
+}
+
+.rejected-indicator {
+background-color: red;
+}
+
+.pending-indicator {
+background-color: orange;
+}
+
+
+.request-card.approved {
+  background-color: #eafcee; /* Light Green */
+  border-left: 5px solid green;
+}
+
+.request-card.rejected {
+  background-color: #ffe9ea; /* Light Red */
+  border-left: 5px solid red;
+}
+
+.request-card.pending {
+  background-color: #faf5e5; /* Light Yellow */
+  border-left: 5px solid #ffa500;
+}

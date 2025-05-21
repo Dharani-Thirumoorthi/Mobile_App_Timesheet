@@ -1,0 +1,24 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="custom-header">
+    <img src="assets/Logo.png" alt="Logo" class="logo">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="custom-background">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!-- GIF Section -->
+  <div id="gif-container">
+    <img src="/assets/time4.gif" alt="Welcome Animation" class="welcome-gif" />
+  </div>
+
+  <div id="container">
+    <p class="one">Your daily work, your way let’s begin tracking!</p>
+    <br />
+    <button id="get-started-button" routerLink="/signin">Get Started</button>
+  </div>
+</ion-content>

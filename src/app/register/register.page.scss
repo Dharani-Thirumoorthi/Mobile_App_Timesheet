@@ -1,0 +1,251 @@
+.header-gradient {
+  background: linear-gradient(to right, #FFBBEC, #A9C9FF);
+  height: 80px;
+  padding: 0 10px; /* Reduce padding */
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+}
+
+
+
+.contact-us {
+  font-size: 16px;
+  font-weight: lighter;
+  color: #ffffff; /* Adjust text color as needed */
+  cursor: pointer;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  padding-right: 2px; /* Move it away from the edge */
+  position: relative;
+  z-index: 10; /* Ensure it's above other elements */
+}
+
+.user-icon {
+  font-size: 22px;
+  color: white;
+}
+
+.sign-up-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 16px;
+    
+    background-color: #f0f4f8;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  
+    form {
+      width: 100%;
+      max-width: 400px;
+      display: flex;
+    flex-direction: column; /* Ensures vertical alignment of items */
+    align-items: center; /* Center child elements inside the form */
+    }
+  
+    .input-item {
+      --background: #ffffff;
+      --highlight-color-focused: #3880ff;
+      --placeholder-color: #666;
+      --color: #333;
+      margin-bottom: 16px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+      ion-label {
+        color: #666;
+      }
+  
+      ion-input {
+        color: #333;
+        font-size: 16px;
+      }
+  
+      ion-icon {
+        font-size: 2rem;
+  color: #595959;
+
+  
+      }
+    }
+
+    
+    
+  
+    .sign-up-btn {
+      width: 100%; /* Full width of the form */
+      max-width: 200px; /* Limit width */
+      margin-top: 16px;
+      --padding-start: 12px;
+      --padding-end: 12px;
+      --height: 40px;
+      --border-radius: 25px;
+      font-size: 14px;
+      --background : #E85FA6;
+      margin: 16px auto; /* Center the button */
+    }
+  
+    .sign-in-link {
+      margin-top: 20px;
+      text-align: center;
+  
+      p {
+        font-size: 14px;
+        color: #666;
+  
+        a {
+          color: #3880ff;
+          text-decoration: none;
+          font-weight: 500;
+  
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+  
+  ion-content {
+    --background: linear-gradient(to bottom, #e3f2fd, #ffffff);
+  }
+  
+  .logo {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+  }
+
+  .form-card {
+    background: #fdebf8; /* Light purple background */
+    border-radius: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    max-width: 400px; /* Limit card width */
+    text-align: center;
+  }
+  
+
+  /* Bubble Container */
+.bubble-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1; /* Ensure bubbles are behind content */
+}
+
+/* Individual Bubbles */
+.bubble {
+  position: absolute;
+  bottom: -50px; /* Start below screen */
+  background: #E85FA6; /* Light white bubbles */
+  border-radius: 50%;
+  animation: float 10s infinite linear;
+}
+
+/* Different sizes and positions */
+.bubble:nth-child(1) {
+  width: 40px;
+  height: 40px;
+  left: 10%;
+  animation-duration: 8s;
+  animation-delay: 0s;
+}
+
+.bubble:nth-child(2) {
+  width: 60px;
+  height: 60px;
+  left: 30%;
+  animation-duration: 10s;
+  animation-delay: 2s;
+}
+
+.bubble:nth-child(3) {
+  width: 30px;
+  height: 30px;
+  left: 50%;
+  animation-duration: 6s;
+  animation-delay: 4s;
+}
+
+.bubble:nth-child(4) {
+  width: 70px;
+  height: 70px;
+  left: 70%;
+  animation-duration: 9s;
+  animation-delay: 1s;
+}
+
+.bubble:nth-child(5) {
+  width: 50px;
+  height: 50px;
+  left: 90%;
+  animation-duration: 7s;
+  animation-delay: 3s;
+}
+
+.bubble:nth-child(6) {
+  width: 40px;
+  height: 40px;
+  left: 20%;
+  animation-duration: 11s;
+  animation-delay: 5s;
+}
+
+.bubble:nth-child(7) {
+  width: 80px;
+  height: 80px;
+  left: 40%;
+  animation-duration: 12s;
+  animation-delay: 0s;
+}
+
+.bubble:nth-child(8) {
+  width: 60px;
+  height: 60px;
+  left: 80%;
+  animation-duration: 8s;
+  animation-delay: 0s;
+}
+
+/* Animation */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-100vh);
+    opacity: 0;
+  }
+}
+
+.visibility-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 22px;
+  cursor: pointer;
+  color: #666;
+}
+
+
+  

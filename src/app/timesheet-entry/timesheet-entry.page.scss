@@ -1,0 +1,449 @@
+.white-background {
+  --background: #fdebf8 !important;
+  color: #000000 !important;
+}
+
+.container {
+  text-align: center;
+  color: #000000;
+}
+
+ion-grid {
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+ion-row {
+  border-bottom: 1px solid #ccc;
+  color: #000000;
+}
+
+ion-col {
+  padding: 8px;
+  text-align: center;
+  color: #000000;
+}
+.day{
+  padding: 21px;
+  text-align: center;
+  color: #000000;
+}
+
+ion-input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.header-row {
+  background-color: #f0f0f0;
+  font-weight: bold;
+  text-align: left;
+  padding: 10px;
+  color: #000000;
+}
+
+.sub-header {
+  background-color: #e0e0e0;
+  font-weight: bold;
+  color: #000000;
+}
+
+.totals-row {
+  font-weight: bold;
+  background-color: #d9f7be; /* Light green for total row */
+  color: #000000;
+}
+
+/* Page Background */
+ion-content {
+  --background: #f4f4f4;
+}
+
+/* Card Styling */
+ion-card {
+  text-align: center;
+  margin: 10px;
+  --background: #ffffff;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+ion-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ion-card-subtitle {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+ion-card-content h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Icon Styling */
+ion-icon {
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+/* Center the button */
+.button-col {
+  text-align: center;
+}
+
+.statistics-button {
+  font-size: 1.2rem;
+  padding: 10px 100px;
+  border-radius: 5px;
+}
+
+/* Fix unwanted black space between sections */
+ion-content > * {
+  margin: 0;
+  padding: 0;
+}
+
+/* Alert Styles */
+::ng-deep .success-alert .alert-wrapper {
+  background-color: #ffffff !important;  /* Light green */
+  color: #0e952d !important;  /* Dark green text */
+  border-radius: 8px;
+}
+
+::ng-deep .error-alert .alert-wrapper {
+  background-color: #ffffff !important;  /* Light red */
+  color: #721c24 !important;  /* Dark red text */
+  border-radius: 8px;
+}
+
+::ng-deep .alert-button {
+  color: #ffffff !important; /* White text for button */
+  font-weight: bold;
+}
+
+::ng-deep .alert-button-group button {
+  background-color: #28a745 !important; /* Green button for success */
+}
+
+::ng-deep .error-alert .alert-button-group button {
+  background-color: #dc3545 !important; /* Red button for error */
+}
+
+::ng-deep .success-alert .alert-message {
+  color: #155724 !important;  /* Dark green text */
+  font-weight: bold;
+}
+
+::ng-deep .error-alert .alert-message {
+  color: #dc3545 !important;  /* Dark red text */
+  font-weight: bold;
+}
+
+.edit {
+  font-size: 22px; /* Adjust size as needed */
+  color: #000000; /* Optional: Change color if needed */
+  vertical-align: middle; /* Align properly */
+}
+
+.edit-label {
+  font-size: 14px;
+  color: #007bff; /* Customize the color */
+  margin-left: 8px;
+  vertical-align: middle;
+}
+
+.nav-buttons ion-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap; /* Prevents elements from moving to the next row */
+  gap: 10px;
+}
+
+.nav-buttons ion-col {
+  flex: 0 1 auto; /* Prevents stretching */
+  white-space: nowrap; /* Prevents text from breaking into multiple lines */
+}
+
+ion-select {
+  width: 120px; /* Ensures a fixed width */
+  max-width: 60px;
+  text-align: center;
+}
+
+ion-button {
+  white-space: nowrap; /* Ensures text inside buttons doesn’t wrap */
+}
+
+.custom-prev {
+  --background: #f48fc3; /* Change to your desired color */
+  --color: white; /* Text color */
+}
+
+.custom-next {
+  --background: #f48fc3; /* Change to your desired color */
+  --color: white; /* Text color */
+}
+
+
+.green-text {
+  color: #00c735 !important;
+}
+
+.red-text {
+  color: red !important;
+}
+
+// Apply a gray background for Saturday and Sunday
+// .day:nth-of-type(7n), /* Saturday */
+// .day:nth-of-type(7n+1) { /* Sunday */
+//   background-color: #e0e0e0 !important;
+//   color: #7a7a7a;
+//   font-weight: bold;
+// }
+
+
+// Also apply the gray background to the input fields of weekends
+ion-row:nth-child(n+2):nth-child(7n), // Saturday inputs
+ion-row:nth-child(n+2):nth-child(7n+1) { // Sunday inputs
+  ion-input {
+    background-color: #dbe8ff!important;
+    color: #000000 !important;
+  }
+}
+
+ion-input {
+  font-size: 17px !important; /* Default font size */
+  font-weight: bold;
+}
+
+.green-text {
+  font-size: 17px !important; /* Increase font size for worked hours */
+  font-weight: bold;
+  color: green;
+}
+
+.red-text {
+  font-size: 17px !important; /* Increase font size for leave hours */
+  font-weight: bold;
+  color: red;
+}
+
+.holiday-input {
+  font-size: 17px !important; /* Increase font size for holidays */
+  font-weight: bold;
+  color: gray;
+}
+.holiday {
+  background-color: #d3d3d3; /* Light gray */
+  color: #808080; /* Dark gray text */
+  cursor: not-allowed;
+}
+/* Gray out holidays */
+.holiday-text {
+  color: gray !important;
+  font-weight: bold;
+}
+
+/* Gray out input fields for holidays */
+.holiday-input {
+  background-color: lightgray !important;
+  color: darkgray !important;
+  pointer-events: none; /* Prevents interaction */
+}
+/* Grays out entire row if it's a holiday */
+.holiday-row {
+  background-color: #e0e0e0 !important; /* Light gray background */
+  pointer-events: none; /* Prevents user interaction */
+  opacity: 0.7;
+}
+
+/* Grays out individual input fields */
+.holiday-field {
+  background-color: #d6d6d6 !important; /* Slightly darker gray */
+  color: #888 !important;
+  pointer-events: none;
+  border: 1px solid #c2c2c2 !important;
+}
+
+/* Grays out holiday date text */
+.holiday-text {
+  color: gray !important;
+  font-weight: bold;
+}
+
+//
+
+/* Grays out entire row if it's a holiday or weekend */
+.holiday-row {
+  background-color: #e0e0e0 !important; /* Light gray background */
+  pointer-events: none; /* Prevents user interaction */
+  opacity: 0.7;
+}
+
+/* Grays out individual input fields */
+.holiday-field {
+  background-color: #d6d6d6 !important; /* Slightly darker gray */
+  color: #888 !important;
+  pointer-events: none;
+  border: 1px solid #c2c2c2 !important;
+}
+
+/* Grays out holiday and weekend date text */
+.holiday-text {
+  color: gray !important;
+  font-weight: bold;
+}
+
+
+//
+//
+.holiday-row {
+  background-color: #dfeafc!important; /* Full gray-out for holidays */
+  pointer-events: none; /* Disable interaction */
+  opacity: 0.6;
+}
+
+.weekend-row {
+  background-color: #e8f0fe !important; /* Light gray for weekends */
+}
+
+.holiday-text {
+  color: #999 !important; /* Grayed-out text for holidays */
+}
+
+.weekend-text {
+  color: #000000 !important; /* Slightly different color for weekends */
+}
+
+
+
+.holiday-field {
+  background-color: #e0e0e0 !important; /* Fully gray-out input fields for holidays */
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+.weekend-field {
+  background-color: #fdf8c4 !important; /* Light yellow for weekends (but editable) */
+}
+.holiday-row {
+  background-color: #f0f0f0; // Light gray for holidays
+}
+
+.weekend-row {
+  background-color: #e0e0e0; // Slightly darker gray for weekends
+}
+
+.holiday-text, .weekend-text {
+  color: #a0a0a0; // Gray text for holidays and weekends
+}
+
+.holiday-field, .weekend-field {
+  background-color: #f8f8f8; // Light gray background for input fields
+}
+
+.green-text {
+  color: green; // Green text for positive worked hours
+}
+
+.red-text {
+  color: red; // Red text for positive leave hours
+}
+/* Apply gray background only to holiday and weekend rows */
+.holiday-row,
+.weekend-row {
+  background-color: #f0f0f0; /* Light gray for holidays and weekends */
+}
+
+/* Apply gray text color only to holiday and weekend text */
+.holiday-text,
+.weekend-text {
+  color: #a0a0a0; /* Gray text for holidays and weekends */
+}
+
+/* Apply green text for worked hours */
+.green-text {
+  color: green !important; /* Ensure green text for worked hours */
+}
+
+/* Apply red text for leave hours */
+.red-text {
+  color: red !important; /* Ensure red text for leave hours */
+}
+
+/* Ensure input fields for holidays and weekends are grayed out */
+.holiday-field ion-input,
+.weekend-field ion-input {
+  background-color: #f8f8f8; /* Light gray background for input fields */
+  color: #a0a0a0; /* Gray text for input fields */
+}
+
+/* Apply gray background only to holiday and weekend rows */
+.holiday-row,
+.weekend-row {
+  background-color: #f0f0f0; /* Light gray for holidays and weekends */
+}
+
+/* Apply gray text color only to holiday and weekend text */
+.holiday-text,
+.weekend-text {
+  color: #000000; /* Gray text for holidays and weekends */
+}
+
+/* Ensure input fields for holidays and weekends are grayed out */
+.holiday-field ion-input,
+.weekend-field ion-input {
+  background-color: #f8f8f8; /* Light gray background for input fields */
+  color: #a0a0a0; /* Gray text for input fields */
+}
+
+/* Apply green text for worked hours */
+.green-text {
+  color: green !important; /* Ensure green text for worked hours */
+}
+
+/* Apply red text for leave hours */
+.red-text {
+  color: red !important; /* Ensure red text for leave hours */
+}
+/* Apply gray background only to holiday and weekend rows */
+.holiday-row,
+.weekend-row {
+  background-color: #f0f0f0; /* Light gray for holidays and weekends */
+}
+
+/* Apply gray text color only to holiday and weekend text */
+.holiday-text,
+.weekend-text {
+  color: #000000; /* Gray text for holidays and weekends */
+}
+
+/* Ensure input fields for holidays and weekends are grayed out */
+.holiday-field ion-input,
+.weekend-field ion-input {
+  background-color: #f8f8f8; /* Light gray background for input fields */
+  color: #000000; /* Gray text for input fields */
+}
+
+/* Apply green text for worked hours */
+.green-text {
+  color: green !important; /* Ensure green text for worked hours */
+}
+
+/* Apply red text for leave hours */
+.red-text {
+  color: red !important; /* Ensure red text for leave hours */
+}
+
+
+

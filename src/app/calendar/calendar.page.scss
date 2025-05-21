@@ -1,0 +1,303 @@
+.calendar-content {
+  padding: 15px;
+
+  ion-card {
+    text-align: center;
+    background: #f8f9fa;
+  }
+
+  ion-list {
+    margin-top: 15px;
+  }
+}
+.yellow-mark {
+  background-color: yellow !important;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+.header-gradient {
+  background: linear-gradient(to right, #A3C848, #3AB0E5);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensure logo and contact are spaced out */
+  padding: 10px;
+  padding-top: 10px;
+}
+
+.logo {
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+}
+
+
+.contact-us {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff; /* Adjust text color as needed */
+  cursor: pointer;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  padding-right: 2px; /* Move it away from the edge */
+  position: relative;
+  z-index: 10; /* Ensure it's above other elements */
+}
+
+.user-icon {
+  font-size: 22px;
+  color: white;
+}
+
+
+/* Page Background */
+ion-content {
+  --background: #fdebf8;
+  
+}
+
+ion-menu {
+  --background: linear-gradient(to right, #A3C848, #3AB0E5); /* Gradient background for the sidebar */
+  --width: 250px; /* Adjust width of the sidebar */
+  --box-shadow: none; /* Optional: remove shadow for a cleaner look */
+}
+
+ion-menu ion-content {
+  --background: linear-gradient(to right, #A3C848, #3AB0E5); /* Ensure gradient continues in the sidebar */
+}
+
+ion-header {
+  --background: transparent; /* Keep header transparent so gradient is visible */
+  height: 80px; /* Custom height */
+  padding-top: env(safe-area-inset-top); /* Avoid overlap with status bar */
+}
+
+ion-toolbar {
+  --background: transparent; /* Keep toolbar transparent to let gradient show */
+}
+
+.dashboard{
+  --background: linear-gradient(to right, #A3C848, #3AB0E5); /* Ensure items don’t have their own background */
+  --color: #ffffff; /* White text color */
+}
+.timesheetentry{
+  --background: linear-gradient(to right, #A3C848, #3AB0E5); /* Ensure items don’t have their own background */
+  --color: #ffffff; /* White text color */
+}
+.calendar{
+  --background: linear-gradient(to right, #A3C848, #3AB0E5); /* Ensure items don’t have their own background */
+  --color: #ffffff; /* White text color */
+}
+.timesheetreport{
+--background: linear-gradient(to right, #A3C848, #3AB0E5); /* Ensure items don’t have their own background */
+  --color: #ffffff; /* White text color */
+}
+.expensesheet{
+--background: linear-gradient(to right, #A3C848, #3AB0E5); /* Ensure items don’t have their own background */
+  --color: #ffffff; /* White text color */
+}
+
+ion-list {
+  padding: 0; /* Ensure no extra padding or margins are added */
+}
+
+
+/* Card Styling */
+ion-card {
+  text-align: center;
+  margin: 10px;
+  --background: #ffffff;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+ion-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ion-card-subtitle {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+ion-card-content h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Icon Styling */
+// ion-icon {
+//   font-size: 2rem;
+//   color: #ffffff;
+// }
+
+/* Center the button */
+.button-col {
+  text-align: center;
+}
+
+.statistics-button {
+  font-size: 1.2rem;
+  padding: 10px 100px;
+  border-radius: 5px;
+}
+
+/* Header Styling */
+ion-header {
+--background: #3AB0E5; /* Change to your desired color (e.g., light blue) */
+height: 80px; /* Adjust header height */
+}
+
+ion-toolbar {
+  --background: linear-gradient(to right, #A3C848, #3AB0E5) !important;
+  height: 80px;
+  padding: 0 10px; /* Reduce padding */
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+/* Title Color in Header */
+ion-title {
+color: white; /* Adjust title text color */
+}
+
+/* Fix unwanted black space between sections */
+ion-content > * {
+margin: 0;
+padding: 0;
+}
+
+ion-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  ion-label {
+    flex: 1;
+  }
+
+  ion-button {
+    --color: #d9534f;  /* Set delete button color */
+    --padding-start: 10px;
+    --padding-end: 10px;
+    margin-left: auto; /* Push button to the right */
+    font-weight: bold;
+  }
+
+  ion-icon {
+    font-size: 24px; /* Increase icon size */
+    color: rgb(244, 36, 36); /* Make sure it’s visible */
+  }
+  .dashbord-icon{
+    color: #ffffff;
+    font-size: 2rem;
+  }
+  .timesheet-entry-icon{
+    color: #ffffff;
+    font-size: 2rem;
+  }
+  .calendar-icon{
+    color: #ffffff;
+    font-size: 2rem;
+  }
+  .timesheet-report-icon{
+    color: #ffffff;
+    font-size: 2rem;
+  }
+  .expensesheet-icon{
+    color: #ffffff;
+    font-size: 2rem;
+  }
+}
+.calendar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+
+.custom-calendar {
+  width: 100%;
+  max-width: 300px;
+}
+.timeline {
+  position: relative;
+  margin-left: 20px;
+  padding-left: 20px;
+  border-left: 2px solid #007bff; /* Vertical line */
+}
+
+.timeline-event {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.timeline-dot {
+  width: 12px;
+  height: 12px;
+  background-color: #007bff;
+  border-radius: 50%;
+  position: absolute;
+  left: -26px; /* Adjust position */
+}
+
+.event-card {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  border-left: 4px solid #007bff;
+}
+
+
+.event-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+  width: 90%;
+  
+}
+
+.event-actions {
+  display: flex;
+  gap: 10px;
+}
+
+ion-button {
+  --padding-start: 0;
+  --padding-end: 0;
+  font-size: 18px;
+}
+.event-details {
+  flex: 1;
+}
+
+.event-type {
+  font-size: 14px;
+  font-weight: bold;
+  color: #000;
+  margin-top: 5px; /* Adjust spacing */
+}
+.events{
+  margin-left: 27px;
+}

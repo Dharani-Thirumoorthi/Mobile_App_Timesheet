@@ -1,0 +1,119 @@
+<!-- Main Sidebar (Existing) -->
+<ion-menu side="start" menu-id="first" content-id="main-content" class="dashboard">
+  <ion-header>
+    <ion-toolbar class="toolbar">
+      <ion-title>Timesheet</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="dashboard">
+    <ion-list class="dashboard">
+      <ion-item 
+      (click)="navigateToDashboard()" 
+      [ngClass]="{'active-menu-item': currentRoute === '/dashboard'}">
+      <ion-icon slot="start" name="speedometer-outline"></ion-icon>
+      <ion-label>Dashboard</ion-label>
+    </ion-item>
+    
+    <ion-item 
+      (click)="navigateToTimesheetEntry()" 
+      [ngClass]="{'active-menu-item': currentRoute === '/timesheet-entry'}">
+      <ion-icon slot="start" name="create-outline"></ion-icon>
+      <ion-label>Timesheet Entry</ion-label>
+    </ion-item>
+    
+    <ion-item 
+      (click)="navigateToTimesheetReport()" 
+      [ngClass]="{'active-menu-item': currentRoute === '/timesheet-report'}">
+      <ion-icon slot="start" name="document-text-outline"></ion-icon>
+      <ion-label>Timesheet Report</ion-label>
+    </ion-item>
+    
+    <ion-item 
+      (click)="navigateToCalendar()" 
+      [ngClass]="{'active-menu-item': currentRoute === '/calendar'}">
+      <ion-icon slot="start" name="calendar-outline"></ion-icon>
+      <ion-label>Calendar</ion-label>
+    </ion-item>
+      
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<!-- User Profile Sidebar -->
+<ion-menu side="end" menu-id="profile-menu" content-id="main-content" class="profile-menu" >
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Profile</ion-title>
+      <ion-buttons slot="end">
+        <ion-button (click)="menuCtrl.close('profile-menu')">
+          <ion-icon name="close-circle-outline"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+   <ion-content class="profile-content">
+    <div class="profile-card">
+      <!-- Profile Image with Upload -->
+      <!-- Profile Image with Upload -->
+<div class="profile-image-container" (click)="uploadImage()">
+  <!-- Show Default Icon if No Image Uploaded -->
+  <ion-icon *ngIf="!profileImage" name="person-circle-outline" class="profile-icon"></ion-icon>
+  
+  <!-- Show Stored Profile Image -->
+  <img *ngIf="profileImage" [src]="profileImage" class="profile-picture" alt="Profile Image">
+  
+  <!-- Add Icon for Upload -->
+  <ion-icon name="add-circle" class="add-icon"></ion-icon>
+</div>
+
+  
+      <!-- Hidden File Input -->
+      <input type="file" id="fileInput" (change)="onFileSelected($event)" hidden>
+  
+      <h2>{{ userProfile?.Employee_Name || 'User' }}</h2>
+  
+      <div class="profile-info">
+        <ion-icon name="id-card-outline"></ion-icon>
+        <p>{{ userProfile?.Employee_ID }}</p>
+      </div>
+  
+      <div class="profile-info">
+        <ion-icon name="mail-outline"></ion-icon>
+        <p>{{ userProfile?.Email }}</p>
+      </div>
+  
+      <div class="profile-info">
+        <ion-icon name="call-outline"></ion-icon>
+        <p>{{ userProfile?.Mobile_Number }}</p>
+      </div>
+    </div>
+  </ion-content>
+  
+  
+  
+
+  </ion-menu>
+
+<!-- Main Content -->
+<ion-router-outlet id="main-content"></ion-router-outlet>
+
+<!-- Header -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button menu="first"></ion-menu-button> 
+    </ion-buttons>
+    <div class="header-gradient">
+      <ion-title class="page-title">{{ pageTitle }}</ion-title>
+      <div class="user-icon-container" (click)="openUserProfile()">
+  <img *ngIf="profileImage; else defaultIcon" [src]="profileImage" class="user-icon-img" alt="User Profile">
+  <ng-template #defaultIcon>
+    <ion-icon name="person-circle-outline" class="user-icon"></ion-icon>
+  </ng-template>
+</div>
+
+      
+    </div>
+  </ion-toolbar>
+</ion-header>

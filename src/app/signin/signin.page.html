@@ -1,0 +1,55 @@
+<ion-header>
+  <div class="header-gradient">
+    <img src="assets/Logo.png" alt="Logo" class="logo">
+  </div>
+</ion-header>
+
+<ion-content>
+   <!-- Bubble Container -->
+   <div class="bubble-container">
+    <span class="bubble"></span>
+    <span class="bubble"></span>
+    <span class="bubble"></span>
+    <span class="bubble"></span>
+    <span class="bubble"></span>
+    <span class="bubble"></span>
+    <span class="bubble"></span>
+    <span class="bubble"></span>
+
+  <div class="sign-in-container">
+    <form (ngSubmit)="login()">
+      <div class="form-card">
+      <!-- User ID Field -->
+      <ion-item class="input-item">
+        <ion-icon name="person-outline" slot="start"></ion-icon>
+        <ion-label position="floating">Employee ID</ion-label>
+        <ion-input type="text" [(ngModel)]="employeeId" name="employeeId" required></ion-input>
+      </ion-item>
+
+      <!-- Password Field -->
+      <ion-item class="input-item">
+        <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" [(ngModel)]="password" name="password" required></ion-input>
+      </ion-item>
+
+      <!-- Sign In Button -->
+      <ion-button expand="block" class="sign-in-btn" type="submit">
+        Sign In
+      </ion-button>
+      </div>
+    </form>
+
+    <!-- Links Section -->
+    <div class="links">
+      <p>
+        Don't have an account?
+        <a class="sign-up" (click)="navigateToRegister()">Sign Up</a>
+      </p>
+      <p>Forgot Password? 
+        <a class="reset-password" (click)="navigateToForgotPassword()">Reset</a>
+      </p>
+    </div>
+  </div>
+   </div>
+</ion-content>

@@ -1,0 +1,445 @@
+/* Sidebar Menu */
+ion-menu {
+  //--background: linear-gradient(to right, #FFBBEC, #A9C9FF);
+  --background:linear-gradient(to right, #D9AFD9 , #97D9E1);
+  --width: 250px; /* Sidebar width */
+  --box-shadow: none; /* Remove default shadow */
+}
+
+ion-menu ion-content {
+  --background: inherit; /* Ensure gradient continues in the sidebar */
+  
+}
+
+ion-list {
+  padding: 0; /* Remove extra padding */
+  
+
+}
+
+ion-item {
+  --background: inherit; /* Inherit sidebar background */
+  --color: #00000; /* White text */
+  font-family: 'Times New Roman', Times, serif;
+  
+ 
+}
+
+/* Header (inside sidebar) */
+ion-header {
+  ion-toolbar {
+    background: transparent;
+    .toolbar {
+      --background: transparent;// Add additional toolbar styles if needed
+    }
+  }
+}
+
+/* Header outside of menu (main app header) */
+ion-header {
+  --background: transparent;
+  height: 80px;
+  padding-top: env(safe-area-inset-top);
+}
+
+ion-toolbar {
+  --background: linear-gradient(to right, #FFBBEC, #A9C9FF) !important;
+  height: 80px;
+  padding: 0 10px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+ion-title {
+  color: black;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 23px;
+}
+
+/* Logo and Contact in Header */
+.header-gradient {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px;
+}
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.contact-us {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.user-icon {
+  font-size: 37px;
+  color: white;
+}
+
+/* Main content background */
+ion-content {
+  --background: #f4f4f4;
+}
+
+/* Alerts */
+::ng-deep .success-alert .alert-wrapper {
+  background-color: #ffffff !important;
+  color: #0e952d !important;
+  border-radius: 8px;
+}
+
+::ng-deep .error-alert .alert-wrapper {
+  background-color: #ffffff !important;
+  color: #721c24 !important;
+  border-radius: 8px;
+}
+
+::ng-deep .alert-button {
+  color: #ffffff !important;
+  font-weight: bold;
+}
+
+::ng-deep .alert-button-group button {
+  background-color: #28a745 !important;
+}
+
+::ng-deep .error-alert .alert-button-group button {
+  background-color: #dc3545 !important;
+}
+
+::ng-deep .success-alert .alert-message {
+  color: #155724 !important;
+  font-weight: bold;
+}
+
+::ng-deep .error-alert .alert-message {
+  color: #dc3545 !important;
+  font-weight: bold;
+}
+
+ion-icon{
+  color: black;
+}
+
+.page-title {
+  font-size: 23px;
+  padding-left: 5px;
+  color: #000000; /* Adjust color as needed */
+  flex-grow: 0; /* Makes it take up available space */
+  text-align: left;
+font-family: 'Times New Roman', Times, serif;
+margin-left: 0px;
+
+}
+
+/* Sidebar Styling */
+ion-menu.profile-menu {
+  --width: 320px;
+  background: #ffffff;
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.profile-card {
+  text-align: center;
+  width: 100%;
+}
+
+.profile-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid #252525;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+}
+
+.profile-card h2 {
+  font-size: 20px;
+  font-weight: bold;
+  color: #252525;
+}
+
+.profile-card p {
+  font-size: 16px;
+  color: #666;
+  margin: 5px 0;
+}
+
+ion-icon.user-icon {
+  font-size: 37px;
+  cursor: pointer;
+  color: #ffffff;
+  margin-right: 10px;
+  transition: 0.3s;
+}
+
+ion-icon.user-icon:hover {
+  color: #f9ed32;
+}
+ion-menu.profile-menu {
+  --width: 230px; /* Reduced width */
+  background: rgba(255, 255, 255, 0); /* Make it semi-transparent */
+  box-shadow: -4px 0 10px rgba(0, 0, 0, 0.1);
+ 
+}
+
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 25px;
+  text-align: center;
+}
+
+.profile-card {
+  width: 100%;
+  max-width: 250px; /* Adjust to prevent overflow */
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.profile-card ion-icon {
+  font-size: 80px;
+  color: #252525;
+  margin-bottom: 10px;
+}
+
+.profile-card h2 {
+  font-size: 25px;
+  font-weight: bold;
+  color: #252525;
+  margin-bottom: 5px;
+}
+
+.profile-card p {
+  font-size: 16px;
+  color: #000000;
+  margin: 5px 0;
+  line-height: 1.4;
+}
+
+.profile-info {
+  
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Space between icon and text */
+  margin: 5px 0;
+  
+
+}
+
+.profile-info ion-icon {
+  font-size: 20px;
+  color: #000000;
+}
+
+//
+.profile-image-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.profile-icon {
+  font-size: 80px;
+  color: #ffffff;
+}
+
+.add-icon {
+  font-size: 24px;
+  color: #f9ed32;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background: white;
+  border-radius: 50%;
+}
+
+//new
+.profile-image-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  cursor: pointer;
+  
+}
+
+.profile-picture {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #ccc;
+}
+
+.profile-icon {
+  font-size: 100px;
+  color: #aaa;
+  width: 100%;
+  height: 100%;
+}
+
+.add-icon {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  color: white;
+  background: #007bff;
+  border-radius: 50%;
+  border: 2px solid white;
+  font-size: 24px;
+}
+
+
+// 
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px; /* Increased padding */
+  text-align: center;
+}
+
+.profile-card {
+  width: 100%;
+  max-width: 320px; /* Increased width */
+  border-radius: 15px;
+  padding: 20px; /* Increased padding */
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+  background: inherit; /* Keeping the same background */
+}
+
+.profile-avatar {
+  width: 120px; /* Increased size */
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid #252525;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 20px;
+}
+
+.profile-card h2 {
+  font-size: 26px; /* Increased font size */
+  font-weight: bold;
+  color: #252525;
+  margin-bottom: 10px;
+}
+
+.profile-card p {
+  font-size: 18px; /* Increased font size */
+  color: #000000;
+  margin: 8px 0;
+  line-height: 1.5;
+}
+
+.profile-info {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* Increased gap */
+  margin: 10px 0;
+}
+
+.profile-info ion-icon {
+  font-size: 24px; /* Increased icon size */
+  color: #000000;
+}
+
+/* Increase profile image container */
+.profile-image-container {
+  position: relative;
+  width: 130px; /* Increased size */
+  height: 130px;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.profile-picture {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #ccc;
+}
+
+.profile-icon {
+  font-size: 120px; /* Increased icon size */
+  color: #aaa;
+}
+
+.add-icon {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  width: 35px;
+  height: 35px;
+  color: white;
+  background: #007bff;
+  border-radius: 50%;
+  border: 2px solid white;
+  font-size: 28px;
+}
+/* User icon in the header */
+.user-icon-container {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.user-icon-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.user-icon {
+  font-size: 40px;
+  color: var(--ion-color-primary);
+}
+
+/* Profile image inside the profile menu */
+.profile-icon-img {
+  width: 60px; /* Adjust size to match user icon */
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+.active-menu-item {
+  background-color: #f9ed32; /* Yellow highlight */
+  color: black !important;
+  font-weight: bold;
+}

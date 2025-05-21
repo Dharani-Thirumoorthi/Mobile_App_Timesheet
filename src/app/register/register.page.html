@@ -1,0 +1,70 @@
+<ion-header [translucent]="true">
+  <div class="header-gradient">
+    <img src="assets/Logo.png" alt="Logo" class="logo">
+  </div>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <!-- Bubble Container -->
+  <div class="bubble-container">
+    <span class="bubble"></span>
+    <span class="bubble"></span>
+    <span class="bubble"></span>
+    <span class="bubble"></span>
+    <span class="bubble"></span>
+    <span class="bubble"></span>
+    <span class="bubble"></span>
+    <span class="bubble"></span>
+  <div class="sign-up-container">
+    <form>
+      <!-- Employee ID Field -->
+      <div class="form-card">
+      <ion-item class="input-item">
+        <ion-icon name="person-outline" slot="start"></ion-icon>
+        <ion-label position="floating">Employee ID</ion-label>
+        <ion-input type="text" [(ngModel)]="employeeId" name="employeeId" required></ion-input>
+      </ion-item>
+      
+      <ion-item class="input-item">
+        <ion-icon name="person-add-outline" slot="start"></ion-icon>
+        <ion-label position="floating">Employee Name</ion-label>
+        <ion-input type="text" [(ngModel)]="employeeName" name="employeeName" required></ion-input>
+      </ion-item>
+      
+      <ion-item class="input-item">
+        <ion-icon name="mail-outline" slot="start"></ion-icon>
+        <ion-label position="floating">Email</ion-label>
+        <ion-input type="email" [(ngModel)]="email" name="email" required></ion-input>
+      </ion-item>
+      
+      <ion-item class="input-item">
+        <ion-icon name="call-outline" slot="start"></ion-icon>
+        <ion-label position="floating">Mobile Number</ion-label>
+        <ion-input type="tel" [(ngModel)]="mobileNumber" name="mobileNumber" required></ion-input>
+      </ion-item>
+      
+      <ion-item class="input-item">
+        <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+        <ion-label position="floating">Password</ion-label>
+        <ion-input type="password" [(ngModel)]="password" name="password" required></ion-input>
+      </ion-item>
+      
+      <ion-item class="input-item">
+        <ion-icon name="lock-open-outline" slot="start"></ion-icon>
+        <ion-label position="floating">Confirm Password</ion-label>
+        <ion-input type="password" [(ngModel)]="confirmPassword" name="confirmPassword" required></ion-input>
+      </ion-item>
+      
+      <ion-button expand="block"  class="sign-up-btn" (click)="signUp()">
+        Sign Up
+      </ion-button>
+      </div>
+    </form>
+
+    <!-- Link to Sign In -->
+    <div class="sign-in-link">
+      <p>Already have an account? <a (click)="navigateToSignIn()">Sign In</a>
+    </div>
+  </div>
+  </div>
+</ion-content>

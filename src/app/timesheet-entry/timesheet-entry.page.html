@@ -1,0 +1,103 @@
+<ion-app>
+  <!-- Sidebar -->
+  <app-sidebar></app-sidebar> 
+
+  <!-- Main Content -->
+  <ion-content class="ion-padding white-background">
+    <div class="container">
+
+      <!-- Navigation Buttons -->
+      <div class="nav-buttons">
+        <ion-row>
+          <ion-col size="auto">
+            <ion-button class="custom-prev" fill="solid" (click)="previous()">Previous</ion-button>
+          </ion-col>
+          <ion-col size="auto">
+            <ion-select [(ngModel)]="selectedYear" (ngModelChange)="onYearOrMonthChange()">
+              <ion-select-option *ngFor="let year of years" [value]="year">{{ year }}</ion-select-option>
+            </ion-select>
+          </ion-col>
+          <ion-col size="auto">
+            <ion-select [(ngModel)]="selectedMonth" (ionChange)="onMonthChange($event)">
+              <ion-select-option *ngFor="let month of months" [value]="month">{{ month }}</ion-select-option>
+            </ion-select>
+          </ion-col>
+          <ion-col size="auto">
+            <ion-button class="custom-next" fill="solid" (click)="next()">Next</ion-button>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <!-- Project Details -->
+      <h3>Project Details</h3>
+      <ion-grid>
+        <ion-row class="header-row">
+          <ion-col><b>Project Id:</b> {{ projectId }}</ion-col>
+        </ion-row>
+        <ion-row class="header-row">
+          <ion-col><b>Project Name:</b> {{ projectName }}</ion-col>
+        </ion-row>
+      </ion-grid>
+<!-- Worked and Leave Hours -->
+<h3 style="display: inline-block; margin-right: 10px;">
+  Worked and Leave Hours
+</h3>
+
+<ion-button size="small" color="primary" (click)="editHours()" *ngIf="!isEditing">Edit</ion-button>
+<ion-button size="small" color="success" (click)="saveHours()" *ngIf="isEditing">Save</ion-button>
+<ion-button size="small" color="danger" (click)="cancelEdit()" *ngIf="isEditing">Cancel</ion-button>
+
+
+      <ion-grid>
+        <ion-row class="sub-header">
+          <ion-col><b>Date</b></ion-col>
+          <ion-col><b>Worked Hours</b></ion-col>
+          <ion-col><b>Leave Hours</b></ion-col>
+        </ion-row>
+
+        <!-- Dynamic Rows for Each Day -->
+      <!-- Dynamic Rows for Each Day -->
+      <ion-row *ngFor="let day of days; let i = index" 
+      [class.weekend-row]="isWeekend[i]">
+<ion-col class="day" [class.weekend-text]="isWeekend[i]">{{ day }}</ion-col>
+<ion-col>
+ <ion-input type="text" [(ngModel)]="workedHours[i]" 
+   (ionInput)="onWorkedHoursChange(i, $event)" min="0" max="24"
+   [readonly]="isReadOnly[i]" [disabled]="isHoliday(day)"
+   [ngClass]="{
+     'green-text': workedHours[i] > 0,
+     'holiday-input': isHoliday(day),    
+     'weekend-field': isWeekend[i], 
+     'red-holiday-input': isHoliday(day)
+   }">
+ </ion-input>
+</ion-col>
+<ion-col>
+ <ion-input type="text" [(ngModel)]="leaveHours[i]" [readonly]="isReadOnly[i]"
+   (ionInput)="onLeaveHoursChange(i, $event)" min="0" max="8"
+   [ngClass]="{
+     'red-text': leaveHours[i] > 0,
+     'holiday-input': isHoliday(day),
+     'weekend-field': isWeekend[i],
+     'red-holiday-input': isHoliday(day)
+   }">
+ </ion-input>
+</ion-col>
+</ion-row>
+
+        <!-- Total Hours Row -->
+        <ion-row class="totals-row">
+          <ion-col><b>Totals:</b></ion-col>
+          <ion-col><b>{{ getTotalHours()  || 0}}</b></ion-col>
+          <ion-col><b>{{ getTotal(leaveHours)  || 0 }}</b></ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </div>
+  </ion-content>
+
+  <!-- Footer with Submit Button -->
+  <ion-footer>
+    <ion-button expand="full" class="custom-prev" fill="solid" (click)="submitAll()">Submit For Approval</ion-button>
+  </ion-footer>
+</ion-app>

@@ -1,0 +1,331 @@
+.header-gradient {
+    background: linear-gradient(to right, #A3C848, #3AB0E5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Ensure logo and contact are spaced out */
+    padding: 10px;
+    padding-top: 10px;
+  }
+  
+  .logo {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+  }
+
+// .header-gradient {
+//   background: linear-gradient(to right, #A3C848, #3AB0E5);
+//   color: white;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between; /* Ensures even spacing */
+//   padding: 10px 15px;
+//   height: 80px; /* Reduce height if necessary */
+  
+// }
+
+// .logo {
+//   width: 100px; /* Adjust logo size */
+//   height: auto;
+//   margin-left: 2px; /* Add margin to prevent sticking to edge */
+//   margin-top: 10px;
+// }
+
+  
+  .contact-us {
+    font-size: 16px;
+    font-weight: 500;
+    color: #ffffff; /* Adjust text color as needed */
+    cursor: pointer;
+  }
+
+  .contact-container {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    padding-right: 2px; /* Move it away from the edge */
+    position: relative;
+    z-index: 10; /* Ensure it's above other elements */
+}
+
+// .contact-us {
+//     font-size: 15px;
+//     font-weight: 500;
+//     color: white;
+//     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Add shadow for visibility */
+//     margin-top: 10px;
+// }
+
+.user-icon {
+    font-size: 22px;
+    color: white;
+}
+  
+  /* Page Background */
+  ion-content {
+    --background:#fdebf8;
+    
+  }
+  
+  ion-menu {
+    --background: linear-gradient(to right, #A3C848, #3AB0E5); /* Gradient background for the sidebar */
+    --width: 250px; /* Adjust width of the sidebar */
+    --box-shadow: none; /* Optional: remove shadow for a cleaner look */
+
+  }
+  
+  ion-menu ion-content {
+    --background: linear-gradient(to right, #A3C848, #3AB0E5); /* Ensure gradient continues in the sidebar */
+  }
+  
+  ion-header {
+    --background: transparent; /* Keep header transparent so gradient is visible */
+    height: 80px; /* Custom height */
+  padding-top: env(safe-area-inset-top); /* Avoid overlap with status bar */
+ 
+  }
+  
+  ion-toolbar {
+    --background: transparent; /* Keep toolbar transparent to let gradient show */
+    
+  }
+  
+
+  .dashboard{
+    --background: linear-gradient(to right, #A3C848, #3AB0E5); /* Ensure items don’t have their own background */
+    --color: #ffffff; /* White text color */
+  }
+  .timesheetentry{
+    --background: linear-gradient(to right, #A3C848, #3AB0E5); /* Ensure items don’t have their own background */
+    --color: #ffffff; /* White text color */
+  }
+  .calendar{
+    --background: linear-gradient(to right, #A3C848, #3AB0E5); /* Ensure items don’t have their own background */
+    --color: #ffffff; /* White text color */
+  }
+.timesheetreport{
+  --background: linear-gradient(to right, #A3C848, #3AB0E5); /* Ensure items don’t have their own background */
+    --color: #ffffff; /* White text color */
+}
+.expensesheet{
+  --background: linear-gradient(to right, #A3C848, #3AB0E5); /* Ensure items don’t have their own background */
+    --color: #ffffff; /* White text color */
+}
+
+  ion-list {
+    padding: 0; /* Ensure no extra padding or margins are added */
+  }
+  
+
+  /* Card Styling */
+  ion-card {
+    text-align: center;
+    margin: 10px;
+    --background: #ffffff;
+    --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   
+  }
+  
+  ion-card-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  ion-card-subtitle {
+    font-size: 0.9rem;
+    color: #666;
+  }
+  
+  ion-card-content h1 {
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  /* Icon Styling */
+  ion-icon {
+    font-size: 2rem;
+    color: #ffffff;
+  }
+  
+  /* Center the button */
+  .button-col {
+    text-align: center;
+  }
+  
+  .statistics-button {
+    font-size: 1.2rem;
+    padding: 10px 100px;
+    border-radius: 5px;
+  }
+  
+/* Header Styling */
+ion-header {
+  --background: #3AB0E5; /* Change to your desired color (e.g., light blue) */
+  height: 80px; /* Adjust header height */
+}
+
+// ion-toolbar {
+//   --background: linear-gradient(to right, #A3C848, #3AB0E5); /* Change to your desired toolbar color (e.g., green) */
+//   color: white; /* Ensure the text color is white for contrast */
+  
+// }
+
+
+ion-toolbar {
+  --background: linear-gradient(to right, #A3C848, #3AB0E5) !important;
+  height: 80px;
+  padding: 0 10px; /* Reduce padding */
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+}
+
+/* Title Color in Header */
+ion-title {
+  color: white; /* Adjust title text color */
+}
+
+/* Fix unwanted black space between sections */
+ion-content > * {
+  margin: 0;
+  padding: 0;
+}
+
+// .user-icon {
+//   font-size: 24px; /* Adjust size as needed */
+//   cursor: pointer;
+//   color: white; /* Adjust color to match your theme */
+// }
+
+// .contact-container {
+//   display: flex;
+//   align-items: center;
+//   gap: 10px; /* Adjust the spacing between text and icon */
+//   cursor: pointer;
+// }
+
+// .user-icon {
+//   font-size: 24px; /* Adjust size as needed */
+//   color: white; /* Adjust color to match your theme */
+// }
+
+// .contact-us {
+//   font-size: 16px;
+//   font-weight: lighter;
+//   color: #ffffff; /* Adjust text color as needed */
+// }
+.section-title {
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.usage-card {
+  background: #ffffff;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+ion-card-subtitle {
+  font-size: 14px;
+  color: #666;
+}
+
+ion-progress-bar {
+  margin-top: 8px;
+  height: 6px;
+  border-radius: 4px;
+}
+.section-title {
+  color: black;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.usage-card {
+  background: #ffffff;
+  color: black;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+ion-progress-bar {
+  margin-top: 8px;
+  height: 6px;
+  border-radius: 4px;
+}
+
+canvas {
+  width: 100% !important;
+  height: 300px !important;
+}
+.progress-container {
+  margin-bottom: 10px;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+ion-progress-bar {
+  --progress-background: rgba(255, 255, 255, 0.1);
+  --progress-bar-border-radius: 8px;
+  height: 10px;
+}
+/* Reduce the card height */
+ion-card {
+  height: 120px; /* Adjust the height as needed */
+  text-align: center;
+  margin: 10px;
+  --background: #ffffff;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+// new today
+/* Adjust card header */
+ion-card-header {
+  font-size: 14px;
+  padding: 5px;
+}
+
+/* Adjust card content */
+ion-card-content h1 {
+  font-size: 1.5rem; /* Reduce font size */
+  font-weight: bold;
+  margin: 5px 0;
+}
+// ion-row[user-cards] ion-card {
+//   height: 90px; /* Adjust this value as needed */
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+// }
+
+// ion-card-content h1 {
+//   font-size: 1.5rem; /* Reduce the font size if needed */
+// }
+.TotalApproval{
+  background-color: #ddfce4;
+}
+.TotalRejected{
+  background-color: #fadfe1;
+}
+.TotalPending{
+  background-color: #fcf5de;
+}
+.TotalWorkeddays{
+  background-color: rgb(220, 255, 185);
+}

@@ -1,0 +1,339 @@
+.custom-header {
+  --background: linear-gradient(to right, #A3C848, #3AB0E5); /* Gradient background */
+  color: white;
+  padding: 5px;
+  font-size: 1.5rem;
+}
+.logo {
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+  display: block;
+  margin-left: 0 auto;
+}
+
+.custom-background {
+  /* Apply a gradient as the background */
+  // --background: linear-gradient(to bottom right, #d41df0, #4ae0e8); /* Gradient background */
+ --background: #fdebf8;
+  background: linear-gradient(to right, #FFBBEC, #A9C9FF);
+  color: rgb(0, 0, 0);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+}
+
+#container {
+  color: rgb(0, 0, 0); /* Adjust text color for visibility */
+  text-align: center;
+  position: absolute; /* Enable absolute positioning */
+  top: 60%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Offset to perfectly center */
+}
+
+#get-started-button {
+  margin-top: 10px; /* Space between the text and button */
+  padding: 12px 24px; /* Button padding for a nice look */
+  background-color: #E85FA6; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove default border */
+  border-radius: 8px; /* Rounded corners */
+  font-size: 16px; /* Font size for readability */
+  cursor: pointer; /* Pointer cursor on hover */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effects */
+}
+
+#get-started-button:hover {
+  background-color: #E85FA6; /* Change background color on hover */
+  transform: scale(1.05); /* Slightly enlarge the button */
+}
+
+.one{
+  font-size: 17px;
+  white-space: nowrap; /* Prevent text wrapping */
+  overflow: hidden; /* Hide any overflow text */
+  text-overflow: ellipsis; /* Add ellipsis if the text exceeds the container width */
+}
+
+/* GIF Container Styling */
+#gif-container {
+  display: flex; /* Use flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  position: absolute; /* Position it on the page */
+  top: 40%; /* Center vertically relative to the page */
+  left: 50%; /* Center horizontally relative to the page */
+  transform: translate(-50%, -50%); /* Offset for perfect centering */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+}
+
+/* GIF Image Styling */
+.welcome-gif {
+  max-width: 200px; /* Adjust the size of the GIF */
+  height: auto; /* Maintain aspect ratio */
+  animation: fadeIn 2s ease-in-out; /* Optional: Add a fade-in animation */
+}
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+
+.header-gradient {
+  background: linear-gradient(to right, #A3C848, #3AB0E5);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Ensure logo and contact are spaced out */
+  padding: 10px;
+  padding-top: 10px;
+}
+
+.logo {
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+}
+
+// .header-gradient {
+//   background: linear-gradient(to right, #A3C848, #3AB0E5);
+//   color: white;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between; /* Ensures even spacing */
+//   padding: 10px 15px;
+//   height: 80px; /* Reduce height if necessary */
+
+// }
+
+// .logo {
+//   width: 100px; /* Adjust logo size */
+//   height: auto;
+//   margin-left: 2px; /* Add margin to prevent sticking to edge */
+//   margin-top: 10px;
+// }
+
+
+.contact-us {
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffffff; /* Adjust text color as needed */
+  cursor: pointer;
+}
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+  padding-right: 2px; /* Move it away from the edge */
+  position: relative;
+  z-index: 10; /* Ensure it's above other elements */
+}
+
+// .contact-us {
+//     font-size: 15px;
+//     font-weight: 500;
+//     color: white;
+//     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3); /* Add shadow for visibility */
+//     margin-top: 10px;
+// }
+
+.user-icon {
+  font-size: 22px;
+  color: white;
+}
+
+/* Page Background */
+ion-content {
+  --background: #f4f4f4;
+  
+}
+
+
+
+ion-header {
+  --background: transparent; /* Keep header transparent so gradient is visible */
+  height: 80px; /* Custom height */
+padding-top: env(safe-area-inset-top); /* Avoid overlap with status bar */
+
+}
+
+ion-toolbar {
+  --background: transparent; /* Keep toolbar transparent to let gradient show */
+  
+}
+
+
+
+
+/* Card Styling */
+ion-card {
+  text-align: center;
+  margin: 10px;
+  --background: #ffffff;
+  --box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+ion-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+ion-card-subtitle {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+ion-card-content h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+/* Icon Styling */
+ion-icon {
+  font-size: 2rem;
+  color: #ffffff;
+}
+
+/* Center the button */
+.button-col {
+  text-align: center;
+}
+
+.statistics-button {
+  font-size: 1.2rem;
+  padding: 10px 100px;
+  border-radius: 5px;
+}i
+
+/* Header Styling */
+ion-header {
+--background: #3AB0E5; /* Change to your desired color (e.g., light blue) */
+height: 80px; /* Adjust header height */
+}
+
+// ion-toolbar {
+//   --background: linear-gradient(to right, #A3C848, #3AB0E5); /* Change to your desired toolbar color (e.g., green) */
+//   color: white; /* Ensure the text color is white for contrast */
+
+// }
+
+
+ion-toolbar {
+--background: linear-gradient(to right, #FFBBEC, #A9C9FF) !important;
+height: 80px;
+padding: 0 10px; /* Reduce padding */
+display: flex;
+align-items: end;
+justify-content: space-between;
+}
+
+/* Title Color in Header */
+ion-title {
+color: white; /* Adjust title text color */
+}
+
+/* Fix unwanted black space between sections */
+ion-content > * {
+margin: 0;
+padding: 0;
+}
+
+// .user-icon {
+//   font-size: 24px; /* Adjust size as needed */
+//   cursor: pointer;
+//   color: white; /* Adjust color to match your theme */
+// }
+
+// .contact-container {
+//   display: flex;
+//   align-items: center;
+//   gap: 10px; /* Adjust the spacing between text and icon */
+//   cursor: pointer;
+// }
+
+// .user-icon {
+//   font-size: 24px; /* Adjust size as needed */
+//   color: white; /* Adjust color to match your theme */
+// }
+
+// .contact-us {
+//   font-size: 16px;
+//   font-weight: lighter;
+//   color: #ffffff; /* Adjust text color as needed */
+// }
+.section-title {
+color: black;
+font-size: 1.2rem;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.usage-card {
+background: #ffffff;
+color: black;
+border-radius: 10px;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+ion-card-subtitle {
+font-size: 14px;
+color: #666;
+}
+
+ion-progress-bar {
+margin-top: 8px;
+height: 6px;
+border-radius: 4px;
+}
+.section-title {
+color: black;
+font-size: 1.2rem;
+font-weight: bold;
+margin-bottom: 10px;
+}
+
+.usage-card {
+background: #ffffff;
+color: black;
+border-radius: 10px;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+ion-progress-bar {
+margin-top: 8px;
+height: 6px;
+border-radius: 4px;
+}
+
+canvas {
+width: 100% !important;
+height: 300px !important;
+}
+.progress-container {
+margin-bottom: 10px;
+}
+
+.progress-label {
+display: flex;
+justify-content: space-between;
+font-size: 14px;
+font-weight: bold;
+margin-bottom: 5px;
+}
+
+ion-progress-bar {
+--progress-background: rgba(255, 255, 255, 0.1);
+--progress-bar-border-radius: 8px;
+height: 10px;
+}

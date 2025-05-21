@@ -1,0 +1,130 @@
+<ion-app>
+  <!-- Sidebar -->
+  <app-sidebar></app-sidebar> 
+
+  <!-- Main Content -->
+  <ion-content>
+    <ion-grid>
+      
+      <!-- Stat Cards -->
+      <!-- Show this section ONLY for normal Users -->
+
+      
+<ion-row *ngIf="employeeRole === 'User'"user-cards>
+  <ion-col size="6">
+    <ion-card class="TotalApproval">
+      <ion-card-header>
+        <ion-icon name="time-outline" color="primary"></ion-icon>
+        <ion-card-subtitle>Total Worked Hours</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <h1>{{ total_worked_hrs }}</h1>
+      </ion-card-content>
+    </ion-card>
+  </ion-col>
+
+  <ion-col size="6">
+    <ion-card class="TotalWorkeddays">
+      <ion-card-header>
+        <ion-icon name="calendar-outline" color="secondary"></ion-icon>
+        <ion-card-subtitle>Total Worked Days</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <h1>{{ total_worked_days }}</h1>
+      </ion-card-content>
+    </ion-card>
+  </ion-col>
+
+  <ion-col size="6">
+    <ion-card class="TotalPending">
+      <ion-card-header>
+        <ion-icon name="hourglass-outline" color="warning"></ion-icon>
+        <ion-card-subtitle>Pending Approvals</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <h1>{{ pending_approvals }}</h1>
+      </ion-card-content>
+    </ion-card>
+  </ion-col>
+
+  <ion-col size="">
+    <ion-card class="TotalRejected">
+      <ion-card-header>
+        <ion-icon name="bed-outline" color="tertiary"></ion-icon>
+        <ion-card-subtitle>Total Leaves</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <h1>{{ total_leave_hrs }}</h1>
+      </ion-card-content>
+    </ion-card>
+  </ion-col>
+</ion-row>
+
+<!-- Show this section ONLY for Admins -->
+<ion-row *ngIf="employeeRole === 'admin'">
+  <ion-col size="12">
+    <ion-card class="TotalApproval">
+      <ion-card-header>
+        <ion-icon name="checkmark-circle-outline" color="success"></ion-icon>
+        <ion-card-subtitle>Total Approved</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <h1>{{ total_approved }}</h1>
+      </ion-card-content>
+    </ion-card>
+  </ion-col>
+
+  <ion-col size="12">
+    <ion-card class="TotalPending">
+      <ion-card-header>
+        <ion-icon name="time-outline" color="warning"></ion-icon>
+        <ion-card-subtitle>Total Pending</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <h1>{{ total_pending }}</h1>
+      </ion-card-content>
+    </ion-card>
+  </ion-col>
+
+  <ion-col size="12">
+    <ion-card class="TotalRejected">
+      <ion-card-header>
+        <ion-icon name="close-circle-outline" color="danger"></ion-icon>
+        <ion-card-subtitle>Total Rejected</ion-card-subtitle>
+      </ion-card-header>
+      <ion-card-content>
+        <h1>{{ total_rejected }}</h1>
+      </ion-card-content>
+    </ion-card>
+  </ion-col>
+</ion-row>
+
+       <!-- Usage Statistics -->
+       <ion-row *ngIf="employeeRole === 'User'">
+        <ion-col size="12">
+          <h2 class="section-title">Usage Statistics</h2>
+        </ion-col>
+      </ion-row>
+
+      <ion-row *ngIf="employeeRole === 'User'">
+        <ion-col size="12">
+          <canvas id="usageChart"></canvas>
+        </ion-col>
+      </ion-row>
+      
+      <!-- Timesheet Status Chart -->
+      <ion-row *ngIf="employeeRole === 'admin'">
+        <ion-col size="12">
+          <h2 class="section-title">Timesheet Status</h2>
+        </ion-col>
+      </ion-row>
+
+<ion-row *ngIf="employeeRole === 'admin'">
+  <ion-col size="12">
+    <canvas id="timesheetChart"></canvas>
+  </ion-col>
+</ion-row>
+    </ion-grid>
+  </ion-content>
+</ion-app>
+
